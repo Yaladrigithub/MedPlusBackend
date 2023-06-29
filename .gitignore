@@ -1,0 +1,5 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MedPlus/packages/WebGrease.1.5.2/WebGrease.1.5.2.nupkg
