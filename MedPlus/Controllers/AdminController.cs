@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MedPlus.DataAccess;
+using MedPlus.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,6 +13,16 @@ namespace MedPlus.Controllers
     {
 
         //Add admin
+        [HttpPost]
+        public IHttpActionResult AddAdmin(Admin admin)
+        {
+            AdminDataAccess adminDataAccess = new AdminDataAccess();
+            int count = adminDataAccess.AddAdmin(admin);
+            if (count > 0)
+                return Ok("Admin added successfully!");
+            else
+                return BadRequest("Admin failed to add!");
+        }
 
         //Login admin
 
